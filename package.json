@@ -5,6 +5,10 @@
   "repository": "https://github.com/ruchern/supremesg-bot.git",
   "author": "Ru Chern Chong <me@ruchern.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js",
+    "lint": "eslint --ext .js src"
+  },
   "dependencies": {
     "discord.js": "^11.3.2"
   },
