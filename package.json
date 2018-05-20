@@ -6,7 +6,7 @@
   "author": "Ru Chern Chong <me@ruchern.com>",
   "license": "MIT",
   "scripts": {
-    "start": "babel-node src/index.js",
+    "start": "node src/index.js",
     "lint": "eslint --ext .js src"
   },
   "dependencies": {

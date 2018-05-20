@@ -1,5 +1,5 @@
-import moment from 'moment/moment'
-import schedule from 'node-schedule'
+const moment = require('moment/moment')
+const schedule = require('node-schedule')
 
 let guild, role, channel
 
@@ -82,4 +82,4 @@ function sendEventNotification (rule, message) {
   })
 }
 
-export default { init }
+module.exports = { init }

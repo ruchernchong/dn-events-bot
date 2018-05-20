@@ -1,5 +1,5 @@
-import { token } from './../keys.js'
-import Schedule from './Schedule'
+const { token } = require('./../keys.js')
+const Schedule = require('./Schedule')
 
 const Discord = require('discord.js')
 const client = new Discord.Client()
