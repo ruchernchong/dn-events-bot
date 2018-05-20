@@ -1,8 +1,13 @@
-import './config'
-import Schedule from './schedule'
+import { token } from './../keys.js'
+import Schedule from './Schedule'
 
-init()
+const Discord = require('discord.js')
+const client = new Discord.Client()
 
-function init () {
-  Schedule.init()
-}
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`)
+
+  Schedule.init(client)
+})
+
+client.login(token)
