@@ -1,4 +1,4 @@
-const package = require('./../package.json')
+const { version } = require('./../package.json')
 const { token } = require('./../keys.js')
 const schedule = require('./schedule')
 
@@ -8,7 +8,7 @@ const client = new Discord.Client()
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`)
 
-  client.user.setGame(`SupremeSG | ${package.version}`)
+  client.user.setGame(`SupremeSG | v${version}`)
 
   schedule.init(client)
 })
