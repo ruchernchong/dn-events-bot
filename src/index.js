@@ -19,7 +19,7 @@ for (const file of commandFiles) {
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`)
 
-  client.user.setGame(`SupremeSG | v${version}`)
+  client.user.setActivity(`SupremeSG | v${version}`)
 
   schedule.init(client)
 })
