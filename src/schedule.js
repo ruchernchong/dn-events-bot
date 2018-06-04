@@ -21,7 +21,7 @@ function guildEvents () {
 
   const rule = new schedule.RecurrenceRule()
   rule.hour = 20
-  rule.minute = 30
+  rule.minute = 30 - 3
 
   schedule.scheduleJob(rule, date => {
     outputGuildEvents(events, date)
@@ -33,7 +33,7 @@ function guildWarEvents () {
 
   const rule = new schedule.RecurrenceRule()
   rule.hour = 21
-  rule.minute = 0
+  rule.minute = 0 - 3
 
   schedule.scheduleJob(rule, date => {
     outputGuildEvents(events, rule, date)
@@ -52,7 +52,7 @@ function outputGuildEvents (events, rule, date) {
 function isDailyReset () {
   const rule = new schedule.RecurrenceRule()
   rule.hour = 6
-  rule.minute = 0
+  rule.minute = 0 - 3
 
   const message = 'Good morning all! Daily Quest has been reset!'
   sendEventNotification(rule, message)
@@ -61,7 +61,7 @@ function isDailyReset () {
 function isStamina () {
   const rule = new schedule.RecurrenceRule()
   rule.hour = [13, 19]
-  rule.minute = 0
+  rule.minute = 0 - 3
 
   const message = 'Free daily x50 stamina. Time to collect them!'
   sendEventNotification(rule, message)
