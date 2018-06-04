@@ -5,8 +5,8 @@ let guild, role, channel
 
 function init (client) {
   guild = client.guilds.find('name', 'SupremeSG')
-  role = guild.roles.find(role => role.name.includes('Developer'))
-  channel = client.channels.find('name', 'development')
+  role = guild.roles.find(role => role.name.includes('@everyone'))
+  channel = client.channels.find('name', 'dragon-nest-events')
 
   isDailyReset()
   isStamina()
@@ -44,7 +44,7 @@ function outputGuildEvents (events, rule, date) {
   const dayOfWeek = moment(date).day()
 
   if (events[dayOfWeek]) {
-    const message = `${role}, ${events[dayOfWeek]} is starting right now!`
+    const message = `${role}, ${events[dayOfWeek]} is starting soon!`
     channel.send(message)
   }
 }
@@ -70,9 +70,9 @@ function isStamina () {
 function isWorldBoss () {
   const rule = new schedule.RecurrenceRule()
   rule.hour = 13
-  rule.minute = 30
+  rule.minute = 30 - 3
 
-  const message = `${role}, World Boss event has just started!`
+  const message = `${role}, World Boss event is starting soon!`
   sendEventNotification(rule, message)
 }
 
