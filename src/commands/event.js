@@ -13,8 +13,8 @@ const schedule = [
     programs: [
       { name: 'Horse Racing', time: '1:00PM', isGuild: false },
       { name: 'Horse Racing', time: '7:00PM', isGuild: false },
+      { name: 'Guild Riddle Party', time: '8:30PM', isGuild: true },
       { name: 'Sky Arena', time: '9:00PM', isGuild: true },
-      { name: 'Guild Riddle Party', time: '9:30PM', isGuild: true },
       { name: 'Horse Racing', time: '11:00PM', isGuild: false }
     ]
   },
