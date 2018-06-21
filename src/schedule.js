@@ -1,10 +1,11 @@
 const moment = require('moment/moment')
 const schedule = require('node-schedule')
+const keys = require('./../keys.js')
 
 let guild, role, channel
 
 function init (client) {
-  guild = client.guilds.find('name', 'SupremeSG')
+  guild = client.guilds.find('id', keys.guild.id)
   role = guild.roles.find(role => role.name.includes('@everyone'))
   channel = client.channels.find('name', 'dragon-nest-events')
 
