@@ -37,7 +37,7 @@ client.on('message', message => {
   } catch (error) {
     console.error(error)
 
-    message.reply(`${message.author}, the command \`${message}\` is not recognised.`)
+    message.reply(`The command \`${message}\` is not recognised.`)
   }
 })
 
