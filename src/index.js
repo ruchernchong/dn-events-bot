@@ -2,7 +2,6 @@ const fs = require('fs')
 const path = require('path')
 const { version } = require('./../package.json')
 const { token } = require('./../keys.js')
-const schedule = require('./schedule')
 const { prefix } = require('./config.js')
 
 const Discord = require('discord.js')
@@ -19,7 +18,7 @@ for (const file of commandFiles) {
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`)
 
-  client.user.setActivity(`SupremeSG | v${version}`)
+  client.user.setActivity(`Finding events | v${version}`)
 })
 
 client.on('message', message => {

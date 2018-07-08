@@ -1,1 +1,1 @@
-# SupremeSG Bot
+# DN Events Bot
