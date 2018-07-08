@@ -21,8 +21,8 @@ function guildEvents () {
   const events = ['Guild Poker', null, 'Guild Boss', 'Guild Poker', 'Guild Boss', 'Guild Camp Party', 'Guild Boss']
 
   const rule = new schedule.RecurrenceRule()
-  rule.hour = 20
-  rule.minute = 30 - 3
+  rule.hour = 19
+  rule.minute = 25
 
   schedule.scheduleJob(rule, date => {
     outputGuildEvents(events, date)
@@ -33,8 +33,8 @@ function guildWarEvents () {
   const events = ['Guild Territorial War', 'Sky Arena', 'Guild War', 'Guild Boss Rush', 'Guild War', null, 'Guild Championship']
 
   const rule = new schedule.RecurrenceRule()
-  rule.hour = 21
-  rule.minute = 0 - 3
+  rule.hour = 20
+  rule.minute = 55
 
   schedule.scheduleJob(rule, date => {
     outputGuildEvents(events, rule, date)
@@ -52,8 +52,8 @@ function outputGuildEvents (events, rule, date) {
 
 function isDailyReset () {
   const rule = new schedule.RecurrenceRule()
-  rule.hour = 6
-  rule.minute = 0 - 3
+  rule.hour = 5
+  rule.minute = 55
 
   const message = 'Good morning all! Daily Quest has been reset!'
   sendEventNotification(rule, message)
@@ -61,8 +61,8 @@ function isDailyReset () {
 
 function isStamina () {
   const rule = new schedule.RecurrenceRule()
-  rule.hour = [13, 19]
-  rule.minute = 0 - 3
+  rule.hour = [12, 18]
+  rule.minute = 55
 
   const message = 'Free daily x50 stamina. Time to collect them!'
   sendEventNotification(rule, message)
@@ -70,8 +70,8 @@ function isStamina () {
 
 function isWorldBoss () {
   const rule = new schedule.RecurrenceRule()
-  rule.hour = 13
-  rule.minute = 30 - 3
+  rule.hour = 12
+  rule.minute = 25
 
   const message = `${role}, World Boss event is starting soon!`
   sendEventNotification(rule, message)
