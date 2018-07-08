@@ -17,6 +17,7 @@ const schedule = [
       { name: 'Sky Arena', time: '9:00PM', isGuild: true },
       { name: 'Horse Racing', time: '11:00PM', isGuild: false }
     ]
+
   },
   {
     day: 2,

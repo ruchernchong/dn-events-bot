@@ -20,8 +20,6 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`)
 
   client.user.setActivity(`SupremeSG | v${version}`)
-
-  schedule.init(client)
 })
 
 client.on('message', message => {

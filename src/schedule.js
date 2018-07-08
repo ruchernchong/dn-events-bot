@@ -1,13 +1,11 @@
 const moment = require('moment/moment')
 const schedule = require('node-schedule')
-const keys = require('./../keys.js')
 
-let guild, role, channel
+let channel, role
 
-function init (client) {
-  guild = client.guilds.find('id', keys.guild.id)
-  role = guild.roles.find(role => role.name.includes('@everyone'))
-  channel = client.channels.find('name', 'dragon-nest-events')
+function init (message) {
+  channel = message.guild.channels.find('name', 'event-notifications')
+  role = message.guild.roles.find('name', '@everyone')
 
   isDailyReset()
   isStamina()
