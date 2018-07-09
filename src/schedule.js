@@ -19,7 +19,7 @@ function guildEvents () {
   const events = ['Guild Poker', null, 'Guild Boss', 'Guild Poker', 'Guild Boss', 'Guild Camp Party', 'Guild Boss']
 
   const rule = new schedule.RecurrenceRule()
-  rule.hour = 19
+  rule.hour = 20
   rule.minute = 25
 
   schedule.scheduleJob(rule, date => {
@@ -68,7 +68,7 @@ function isStamina () {
 
 function isWorldBoss () {
   const rule = new schedule.RecurrenceRule()
-  rule.hour = 12
+  rule.hour = 13
   rule.minute = 25
 
   const message = `${role}, World Boss event is starting soon!`
