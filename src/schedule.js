@@ -50,8 +50,8 @@ function outputGuildEvents (events, rule, date) {
 
 function isDailyReset () {
   const rule = new schedule.RecurrenceRule()
-  rule.hour = 5
-  rule.minute = 55
+  rule.hour = 6
+  rule.minute = 0
 
   const message = 'Good morning all! Daily Quest has been reset!'
   sendEventNotification(rule, message)
@@ -59,8 +59,8 @@ function isDailyReset () {
 
 function isStamina () {
   const rule = new schedule.RecurrenceRule()
-  rule.hour = [12, 18]
-  rule.minute = 55
+  rule.hour = [13, 19]
+  rule.minute = 0
 
   const message = 'Free daily x50 stamina. Time to collect them!'
   sendEventNotification(rule, message)
